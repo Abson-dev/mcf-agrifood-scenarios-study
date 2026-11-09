@@ -62,7 +62,10 @@ decisions pending: [`metadata/flags.csv`](metadata/flags.csv).
 │   ├── data-management-plan.md     Storage, licences, confidentiality
 │   └── questionnaires/             Survey instruments and catalog documentation
 └── data/                     Local only — ignored by git (except data/README.md)
-    ├── raw/                  Microdata as released, one folder per <ISO3>_<SURVEY>_<ROUND>
+    ├── raw/                  Microdata as released, by coverage group
+    │   ├── focus-countries/  NGA, KEN, UGA, ETH, GHA, RWA
+    │   ├── ag-programming/   MWI, MOZ, TZA
+    │   └── waemu/            BEN, BFA, CIV, GNB, MLI, NER, SEN, TGO
     └── processed/            Harmonised extracts
 ```
 

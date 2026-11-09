@@ -17,7 +17,7 @@ Download questionnaires (resource type doc/qst) into docs/::
 Download and unpack the Stata release into data/raw/::
 
     python scripts/wb_mdl_download.py BFA_2021_EHCVM-P_v05_M --match "*_Stata.zip" \
-        --dest data/raw/BFA_EHCVM-P_2021 --extract
+        --dest data/raw/waemu/BFA_EHCVM-P_2021 --extract
 """
 
 from __future__ import annotations

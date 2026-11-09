@@ -16,6 +16,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Changed (layout)
+- `data/raw/` split by coverage group: `focus-countries/`, `ag-programming/`, `waemu/`.
+  `raw_manifest.csv` gains a `group` column; `build_raw_manifest.py` rejects folders
+  outside the three groups.
+
 ### Flagged
 - Côte d'Ivoire: catalog sample of 13,693 includes 728 non-completed interviews; 12,965 completed
   households are complete in all files. Initially misreported as a data gap (corrected).

@@ -14,7 +14,7 @@ The employment section of the EHCVM household questionnaire is **Section 4** (da
 
 Enumerator manuals, classification lists (ISIC/ISCO-type nomenclatures), basic
 information documents and survey reports are kept with the data under
-`data/raw/<dataset>/documentation/`.
+`data/raw/<group>/<dataset>/documentation/`.
 
 To refresh or add instruments:
 
