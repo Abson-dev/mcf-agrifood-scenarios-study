@@ -1,5 +1,5 @@
 Portal,URL,Needed for,Account status,Download status
-World Bank Microdata Library,https://microdata.worldbank.org,"EHCVM-2 x8 (catalog 6272–6279, 6224 panel); Malawi IHS6 (8507)",Not registered,Blocked on account
+World Bank Microdata Library,https://microdata.worldbank.org,"EHCVM-2 x8 (catalog 6272–6279, 6224 panel); Malawi IHS6 (8507)","API key held (stored in local .env, git-ignored)","IN HAND: EHCVM-2 x8 (v01, copied from local archive; current per API); BFA panel v05, Malawi IHS6 2024/25 and EHCVM/IHS6 questionnaires downloaded via API 9 Nov 2026. Confirm licence for the EHCVM-2 copies made under an earlier download."
 WAEMU household survey portal,https://phmecv.uemoa.int/nada,EHCVM documentation; second route to files,Not registered,—
 Kenya KeNADA,https://statistics.knbs.or.ke/nada,KCHSP 2022 (131),Not registered,Blocked on account
 Nigeria NBS NADA,https://microdata.nigerianstat.gov.ng,NLFS Q1 2024 (151); Q2 2024–Q2 2025 (152),Not registered,Blocked on account + confidentiality declaration

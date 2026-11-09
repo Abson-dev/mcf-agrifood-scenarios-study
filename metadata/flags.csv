@@ -8,3 +8,4 @@
 7,Ghana,QLFS 2025 Q1 file missing,Only Q2–Q3 file posted; AHIES 2022–24 also available,Ask GSS for Q1,Which series is the baseline: QLFS or AHIES?
 8,Rwanda,Working age is 16+,LFS 2025 public use,Re-derive 15+ where possible,Note for comparability
 9,Nigeria,Q2 2024–Q2 2025 release may not include all quarters,v1.0 notes mention only Q2 2024,Verify on download,None yet
+10,Côte d'Ivoire,EHCVM-2 harmonised files miss 728 households,"Cover file s00_me: 13,693 HH (= catalog). ehcvm_welfare: 12,965 HH; ehcvm_menage: 13,863 rows / 12,966 unique HH (duplicates). WB MDL catalog confirms these counts; no corrected release (v01, last changed 2 Aug 2024)","Rebuild from raw sections s00–s20 for the 728 HH, or check WB MDL for a corrected release / ask INS-CI","Use harmonised files as published (n=12,965) or rebuild from raw sections?"
