@@ -9,3 +9,4 @@
 8,Rwanda,Working age is 16+,LFS 2025 public use,Re-derive 15+ where possible,Note for comparability
 9,Nigeria,Q2 2024–Q2 2025 release may not include all quarters,v1.0 notes mention only Q2 2024,Verify on download,None yet
 10,Côte d'Ivoire,"RESOLVED: catalog sample (13,693) counts 728 non-completed interviews","12,965 completed HH in all files. The 728 extra s00 records are s00q08 = 3 (Non rempli) with no member data. ehcvm_menage has duplicate rows","Nothing to obtain. Use n = 12,965; dedupe ehcvm_menage on grappe+menage",None (documentation note only)
+11,Senegal,"Standalone LFS (ENES 2025, quarterly) exists, newer than EHCVM-2","ENES quarterly 2015–2025 on ANADS, licensed; GLD code for 2015–2024. EHCVM-2 2021/22 in hand",Written request to the ANSD Director-General; access stated as limited to the national statistical system,"Use ENES (labour detail, recency) or EHCVM-2 (comparability with the other WAEMU states) for Senegal? Approve an ANSD request?"
