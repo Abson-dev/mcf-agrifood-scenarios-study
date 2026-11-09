@@ -10,13 +10,14 @@ NBS Tanzania, NSO Malawi, INE Moçambique) for the agrifood scenarios study.
 
 | Location | Contents | Shared via git |
 |---|---|---|
-| `data/raw/<country>/<survey-round>/` | Files exactly as downloaded, with the catalog's documentation | No |
+| `data/raw/<group>/<ISO3>_<SURVEY>_<ROUND>/` | Files exactly as downloaded, with the catalog's documentation | No |
 | `data/processed/` | Harmonised extracts | No |
 | `metadata/`, `registers/` | Source descriptions, no respondent records | Yes |
 
 - Keep raw files read-only. Never edit them in place.
 - Store microdata only on IFPRI-approved storage, not on personal cloud accounts.
-- One folder per survey round, named `<ISO3>_<survey>_<round>` (e.g. `NGA_NLFS_2024Q1`).
+- One folder per survey round, named `<ISO3>_<survey>_<round>` (e.g. `NGA_NLFS_2024Q1`), inside its
+  coverage group: `focus-countries/`, `ag-programming/` or `waemu/`.
 
 ## Licences and terms of use
 

@@ -14,13 +14,35 @@ python scripts/build_raw_manifest.py
 ```
 data/
 ├── raw/                             As released by the producer. Read-only, never edited.
-│   └── <ISO3>_<SURVEY>_<ROUND>/
-│       ├── <producer release folder>/   Unchanged, keeps the producer's version ID
-│       └── documentation/               Basic information documents, questionnaires
+│   ├── focus-countries/             Nigeria, Kenya, Uganda, Ethiopia, Ghana, Rwanda
+│   ├── ag-programming/              Malawi, Mozambique, Tanzania
+│   └── waemu/                       Benin, Burkina Faso, Côte d'Ivoire, Guinea-Bissau,
+│       │                            Mali, Niger, Senegal, Togo
+│       └── <ISO3>_<SURVEY>_<ROUND>/
+│           ├── <producer release folder>/   Unchanged, keeps the producer's version ID
+│           └── documentation/               Basic information documents, manuals, reports
 └── processed/                       Harmonised extracts built by scripts
 ```
 
+Every dataset folder sits under exactly one coverage group. `build_raw_manifest.py` stops
+with an error if it finds a folder outside the three groups.
+
 ## Holdings
+
+### focus-countries/
+
+None yet: Nigeria and Kenya are pending account registration; Uganda, Ethiopia, Ghana and
+Rwanda are pending downloads or formal requests (see `metadata/portals.csv`).
+
+### ag-programming/
+
+| Folder | Release | Files | Households | Individuals | Notes |
+|---|---|---|---|---|---|
+| `MWI_IHS6_2024-25` | MWI_2024-2025_IHS-VI_v01_M_STATA14 | 81 .dta | 12,888 | 55,911 | Integrated household survey; labour module `hh_mod_e`. **Not** a substitute for the Malawi LFS 2024 |
+
+Mozambique (IOF 2022) and Malawi LFS 2024 are pending formal requests; Tanzania ILFS 2025 is pending download.
+
+### waemu/
 
 | Folder | Release | Files | Households | Individuals | Notes |
 |---|---|---|---|---|---|
@@ -33,7 +55,6 @@ data/
 | `SEN_EHCVM-2_2021` | SEN_2021_EHCVM-2_v01_M_STATA14 | 58 .dta | 7,120 | 63,530 | |
 | `TGO_EHCVM-2_2021` | TGO_2021_EHCVM-2_v01_M_STATA14 | 57 .dta | 6,462 | 28,815 | |
 | `BFA_EHCVM-P_2021` | BFA_2021_EHCVM-P_v05_M_Stata | 55 .dta | 3,227 | 22,362 | Panel sub-sample (from EHCVM-1 2018/19); not the baseline sample |
-| `MWI_IHS6_2024-25` | MWI_2024-2025_IHS-VI_v01_M_STATA14 | 81 .dta | 12,888 | 55,911 | Integrated household survey; labour module `hh_mod_e`. **Not** a substitute for the Malawi LFS 2024 |
 
 EHCVM household counts come from the `ehcvm_welfare` file. All counts match the World Bank
 catalog except where noted. The EHCVM employment module is in `s04a_me`–`s04c_me` for

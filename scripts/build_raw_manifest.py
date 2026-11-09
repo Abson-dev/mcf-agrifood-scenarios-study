@@ -17,6 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "metadata" / "raw_manifest.csv"
+# Coverage groups of the study; every dataset folder sits under one of them.
+GROUPS = ("focus-countries", "ag-programming", "waemu")
 
 
 def sha256(path: Path) -> str:
@@ -33,13 +35,16 @@ def main() -> None:
         if not path.is_file() or path.name == ".gitkeep":
             continue
         rel = path.relative_to(RAW).as_posix()
-        dataset = rel.split("/", 1)[0]
+        parts = rel.split("/")
+        if len(parts) < 3 or parts[0] not in GROUPS:
+            raise SystemExit(f"{rel}: expected data/raw/<group>/<dataset>/..., group in {GROUPS}")
+        group, dataset = parts[0], parts[1]
         mtime = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
-        rows.append([dataset, rel, path.stat().st_size, sha256(path), f"{mtime:%Y-%m-%d}"])
+        rows.append([group, dataset, rel, path.stat().st_size, sha256(path), f"{mtime:%Y-%m-%d}"])
 
     with open(OUT, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f, lineterminator="\n")
-        w.writerow(["dataset", "path", "bytes", "sha256", "file_date"])
+        w.writerow(["group", "dataset", "path", "bytes", "sha256", "file_date"])
         w.writerows(rows)
     print(f"Wrote {OUT.relative_to(ROOT)}: {len(rows)} files")
 
