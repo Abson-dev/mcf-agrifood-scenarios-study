@@ -47,6 +47,7 @@ decisions pending: [`metadata/flags.csv`](metadata/flags.csv).
 │   ├── sources.csv           One row per survey: agency, instrument, round, sample, access, caveats, evidence
 │   ├── flags.csv             Gaps and decisions for the study lead
 │   ├── portals.csv           Accounts and download checklist
+│   ├── gld_coverage.csv      World Bank GLD harmonisation code available per country
 │   └── raw_manifest.csv      Size and SHA-256 of every local microdata file (no data)
 ├── registers/                Excel deliverables
 │   ├── Data Access Register.xlsx   Access routes, country register, sequenced actions
@@ -60,6 +61,7 @@ decisions pending: [`metadata/flags.csv`](metadata/flags.csv).
 ├── docs/
 │   ├── data-access-protocol.md     How sources are identified, verified and recorded
 │   ├── data-management-plan.md     Storage, licences, confidentiality
+│   ├── gld-coverage.md             Which countries can reuse World Bank GLD code
 │   └── questionnaires/             Survey instruments and catalog documentation
 └── data/                     Local only — ignored by git (except data/README.md)
     ├── raw/                  Microdata as released, by coverage group

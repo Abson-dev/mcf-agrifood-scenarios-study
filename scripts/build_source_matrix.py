@@ -32,6 +32,7 @@ WRAP = Alignment(wrap_text=True, vertical="top")
 SOURCE_WIDTHS = [13, 12, 34, 22, 34, 14, 26, 30, 34, 28, 36, 22, 50, 44, 20, 40]
 FLAG_WIDTHS = [4, 16, 40, 48, 44, 44]
 PORTAL_WIDTHS = [32, 40, 50, 20, 34]
+GLD_WIDTHS = [13, 6, 14, 30, 30, 18, 30, 26, 40, 50, 40]
 
 
 def read_csv(name: str) -> list[list[str]]:
@@ -86,6 +87,7 @@ def build(out: Path) -> None:
 
     add_table(wb.create_sheet("Flags for John"), read_csv("flags.csv"), 1, FLAG_WIDTHS)
     add_table(wb.create_sheet("Accounts & downloads"), read_csv("portals.csv"), 1, PORTAL_WIDTHS)
+    add_table(wb.create_sheet("GLD coverage"), read_csv("gld_coverage.csv"), 1, GLD_WIDTHS)
 
     out.parent.mkdir(parents=True, exist_ok=True)
     wb.save(out)

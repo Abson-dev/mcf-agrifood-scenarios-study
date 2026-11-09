@@ -16,6 +16,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Added (GLD)
+- GLD coverage check for all 17 countries (`metadata/gld_coverage.csv`,
+  `docs/gld-coverage.md`, "GLD coverage" sheet in the workbook).
+- Senegal ENES 2025 (standalone quarterly LFS, licensed) added to `sources.csv`; flag 11.
+
 ### Changed (layout)
 - `data/raw/` split by coverage group: `focus-countries/`, `ag-programming/`, `waemu/`.
   `raw_manifest.csv` gains a `group` column; `build_raw_manifest.py` rejects folders
