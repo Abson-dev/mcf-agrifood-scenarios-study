@@ -8,8 +8,10 @@ employment baseline for 17 African countries** from national labour force and ho
 survey microdata. This repository holds the access register, the verified source
 matrix and the tooling that keeps them consistent. It never holds the microdata itself.
 
-> **Status (9 Nov 2026):** all 17 countries identified against live catalogs. No
-> microdata downloaded yet — institutional accounts pending. Estimation starts Week 5.
+> **Status (9 Nov 2026):** all 17 countries identified against live catalogs. In hand:
+> EHCVM-2 2021/22 for all 8 WAEMU states, the Burkina Faso EHCVM panel (v05) and Malawi
+> IHS6 2024/25 (see [`data/README.md`](data/README.md)). Other countries are pending accounts
+> and requests. Estimation starts Week 5.
 
 ## Coverage
 
@@ -30,9 +32,9 @@ matrix and the tooling that keeps them consistent. It never holds the microdata 
 | Ghana | QLFS 2025 Q1–Q3 | Registration | Q1 file missing |
 | Rwanda | LFS 2025 | Public use | Working age 16+ |
 | Tanzania | ILFS 2025 | Public use | — |
-| Malawi | LFS 2024 | Not released | Request to NSO; IHS6 available |
+| Malawi | LFS 2024 | Not released | Request to NSO. IHS6 2024/25 **in hand** as a separate instrument, not a substitute |
 | Mozambique | IOF 2022 | Formal request | Request to INE |
-| WAEMU ×8 | EHCVM-2 2021/22 | Registration (WB MDL) | EHCVM-3 2025/26 fielded, not released |
+| WAEMU ×8 | EHCVM-2 2021/22 | **In hand** (WB MDL v01) | EHCVM-3 2025/26 not released; CIV harmonised files miss 728 HH |
 
 Full detail, caveats and evidence links: [`metadata/sources.csv`](metadata/sources.csv);
 decisions pending: [`metadata/flags.csv`](metadata/flags.csv).
@@ -44,20 +46,23 @@ decisions pending: [`metadata/flags.csv`](metadata/flags.csv).
 ├── metadata/                 Source of truth (CSV, reviewed via pull requests)
 │   ├── sources.csv           One row per survey: agency, instrument, round, sample, access, caveats, evidence
 │   ├── flags.csv             Gaps and decisions for the study lead
-│   └── portals.csv           Accounts and download checklist
+│   ├── portals.csv           Accounts and download checklist
+│   └── raw_manifest.csv      Size and SHA-256 of every local microdata file (no data)
 ├── registers/                Excel deliverables
 │   ├── Data Access Register.xlsx   Access routes, country register, sequenced actions
 │   └── source_matrix.xlsx          Generated from metadata/ — do not edit by hand
 ├── scripts/
 │   ├── build_source_matrix.py      metadata/*.csv → registers/source_matrix.xlsx
 │   ├── validate_metadata.py        Completeness checks on sources.csv
+│   ├── build_raw_manifest.py       data/raw → metadata/raw_manifest.csv
+│   ├── wb_mdl_download.py          World Bank Microdata Library API downloads (key in .env)
 │   └── check_no_microdata.py       Guard against committing microdata
 ├── docs/
 │   ├── data-access-protocol.md     How sources are identified, verified and recorded
 │   ├── data-management-plan.md     Storage, licences, confidentiality
 │   └── questionnaires/             Survey instruments and catalog documentation
-└── data/                     Local only — ignored by git
-    ├── raw/                  Microdata as downloaded
+└── data/                     Local only — ignored by git (except data/README.md)
+    ├── raw/                  Microdata as released, one folder per <ISO3>_<SURVEY>_<ROUND>
     └── processed/            Harmonised extracts
 ```
 
@@ -70,6 +75,10 @@ python -m pip install -r requirements.txt
 python scripts/validate_metadata.py     # check the register
 python scripts/build_source_matrix.py   # regenerate registers/source_matrix.xlsx
 ```
+
+To download from the World Bank Microdata Library, put `WB_MDL_API_KEY=<key>` in a `.env`
+file at the repository root. The file is git-ignored and must never be committed. Then run
+`python scripts/wb_mdl_download.py <IDNO> --list`.
 
 To record a new or updated source, edit `metadata/sources.csv`, run both scripts and open
 a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md).

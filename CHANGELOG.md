@@ -6,6 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- EHCVM-2 2021/22 microdata for all 8 WAEMU states placed in `data/raw/` (WB MDL v01
+  releases, copied from local archive). Household counts verified against the catalog.
+- `metadata/raw_manifest.csv` with SHA-256 checksums; `scripts/build_raw_manifest.py`.
+- `data/README.md` describing layout and holdings.
+- Burkina Faso EHCVM panel 2021/22 **v05** (replaces local v02 copies) and Malawi IHS6
+  2024/25, downloaded via the WB MDL API. Case counts verified against the catalog. IHS6 is
+  recorded as a separate instrument and is not a substitute for the Malawi LFS 2024.
+- EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
+- `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
+
+### Flagged
+- Côte d'Ivoire: harmonised EHCVM-2 files cover 12,965 of 13,693 households.
+
+### Changed
 - Repository structure, data access protocol, data management plan, CI checks.
 - `metadata/` CSVs as the single source of truth; the Excel source matrix is generated from them.
 

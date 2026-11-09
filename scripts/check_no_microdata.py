@@ -32,7 +32,7 @@ def main() -> int:
             continue
         if p.suffix.lower() in BLOCKED_EXT:
             problems.append(f"{path}: blocked file type {p.suffix}")
-        if path.startswith("data/") and p.name != ".gitkeep":
+        if path.startswith("data/") and path not in ("data/README.md",) and p.name != ".gitkeep":
             problems.append(f"{path}: files under data/ must not be tracked")
     sizes = subprocess.run(
         ["git", "ls-files", "--format=%(objectsize) %(path)"],
