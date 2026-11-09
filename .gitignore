@@ -1,0 +1,30 @@
+# Survey microdata must never be committed: data-use agreements (WB MDL, NBS,
+# UBOS, NSO Malawi, INE, ...) forbid redistribution to third parties.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Microdata formats anywhere in the tree
+*.dta
+*.sav
+*.sas7bdat
+*.por
+*.rds
+*.RData
+*.parquet
+*.feather
+*.csv
+*.zip
+*.7z
+
+# Office lock files / OS / editor
+~$*
+.~lock.*
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
