@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Data access protocol
+    url: https://github.com/Abson-dev/mcf-agrifood-scenarios-study/blob/main/docs/data-access-protocol.md
+    about: Read before recording a source or raising a gap.

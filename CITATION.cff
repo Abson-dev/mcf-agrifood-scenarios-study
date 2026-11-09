@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this source register, please cite it as below. Cite each survey dataset as required by its producer."
+title: "MCF Agrifood Scenarios Study: Survey Data Access Register and Source Matrix"
+type: dataset
+authors:
+  - family-names: Hema
+    given-names: Aboubacar
+    email: aboubacarhema94@gmail.com
+    affiliation: "International Food Policy Research Institute (IFPRI)"
+date-released: 2026-11-09
+repository-code: "https://github.com/Abson-dev/mcf-agrifood-scenarios-study"
+keywords:
+  - agrifood systems
+  - employment
+  - labour force survey
+  - microdata
+  - Africa
+  - EHCVM

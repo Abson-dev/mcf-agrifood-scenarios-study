@@ -17,6 +17,8 @@ data/processed/*
 *.csv
 *.zip
 *.7z
+# ...except the source-register metadata, which contains no respondent data
+!metadata/*.csv
 
 # Office lock files / OS / editor
 ~$*

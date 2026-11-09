@@ -1,0 +1,50 @@
+name: Data request
+description: Track a registration, formal data request or download for one survey round
+title: "[Request] <Country> — <Survey round>"
+labels: ["data-request"]
+body:
+  - type: input
+    id: country
+    attributes:
+      label: Country
+    validations:
+      required: true
+  - type: input
+    id: survey
+    attributes:
+      label: Survey and round
+      placeholder: e.g. Labour Market Survey 2025
+    validations:
+      required: true
+  - type: input
+    id: holder
+    attributes:
+      label: Holder / portal
+      placeholder: e.g. UBOS microdata archive, catalog/106
+    validations:
+      required: true
+  - type: dropdown
+    id: route
+    attributes:
+      label: Access route
+      options:
+        - Registration, then download
+        - Licensed request via catalog
+        - Formal request to NSO
+        - MOU / fee
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: What access requires
+      description: Forms, declarations, signatory, fees, contact.
+  - type: input
+    id: lodged
+    attributes:
+      label: Date lodged
+  - type: textarea
+    id: log
+    attributes:
+      label: Correspondence log
+      description: Dated entries for each contact with the holder.
