@@ -34,7 +34,7 @@ matrix and the tooling that keeps them consistent. It never holds the microdata 
 | Tanzania | ILFS 2025 | Public use | — |
 | Malawi | LFS 2024 | Not released | Request to NSO. IHS6 2024/25 **in hand** as a separate instrument, not a substitute |
 | Mozambique | IOF 2022 | Formal request | Request to INE |
-| WAEMU ×8 | EHCVM-2 2021/22 | **In hand** (WB MDL v01) | EHCVM-3 2025/26 not released; CIV harmonised files miss 728 HH |
+| WAEMU ×8 | EHCVM-2 2021/22 | **In hand** (WB MDL v01) | EHCVM-3 2025/26 not released |
 
 Full detail, caveats and evidence links: [`metadata/sources.csv`](metadata/sources.csv);
 decisions pending: [`metadata/flags.csv`](metadata/flags.csv).
