@@ -1,0 +1,12 @@
+Portal,URL,Needed for,Account status,Download status
+World Bank Microdata Library,https://microdata.worldbank.org,"EHCVM-2 x8 (catalog 6272–6279, 6224 panel); Malawi IHS6 (8507)",Not registered,Blocked on account
+WAEMU household survey portal,https://phmecv.uemoa.int/nada,EHCVM documentation; second route to files,Not registered,—
+Kenya KeNADA,https://statistics.knbs.or.ke/nada,KCHSP 2022 (131),Not registered,Blocked on account
+Nigeria NBS NADA,https://microdata.nigerianstat.gov.ng,NLFS Q1 2024 (151); Q2 2024–Q2 2025 (152),Not registered,Blocked on account + confidentiality declaration
+UBOS microdata archive (extra),http://microdata.ubos.org:7070,LMS 2025 10% file (106); then full-file request,Not registered,—
+GSS microdata catalog (extra),https://microdata.statsghana.gov.gh,QLFS 2025 (132); AHIES 2022–24 (128),Not registered,—
+NISR microdata (extra),https://microdata.statistics.gov.rw,LFS 2025 (125),Not registered,—
+NBS Tanzania TNADA (extra),https://microdata.nbs.go.tz,ILFS 2025 (65),Not registered,—
+INE Moçambique (formal request),https://mozdata.ine.gov.mz,IOF 2022 (79),Request not lodged,—
+ESS Ethiopia (formal request),https://ess.gov.et,NIHS 2024/25 labour module,Request not lodged,—
+NSO Malawi (formal request),https://nsomalawi.mw,LFS 2024,Request not lodged,—

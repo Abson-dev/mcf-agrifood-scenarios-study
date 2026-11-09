@@ -1,0 +1,37 @@
+name: Access gap / decision
+description: The most recent round is unavailable or differs from the plan, and the study lead needs to decide
+title: "[Gap] <Country> — <short issue>"
+labels: ["access-gap", "needs-decision"]
+body:
+  - type: markdown
+    attributes:
+      value: "Record the gap. Do not substitute an older round or a different survey."
+  - type: input
+    id: country
+    attributes:
+      label: Country
+    validations:
+      required: true
+  - type: textarea
+    id: exists
+    attributes:
+      label: What exists
+      description: Most recent round, holder, instrument type, release status.
+    validations:
+      required: true
+  - type: textarea
+    id: takes
+    attributes:
+      label: What it would take to obtain
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision needed
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Evidence URL

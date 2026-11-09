@@ -1,48 +1,102 @@
-# MCF Agrifood Scenarios Study — data acquisition
+# MCF Agrifood Scenarios Study — Data Acquisition
 
-Data acquisition and source documentation for the Mastercard Foundation agrifood
-scenarios study (IFPRI). The study builds an agrifood employment baseline for
-17 countries from national labour-force and household survey microdata.
+[![CI](https://github.com/Abson-dev/mcf-agrifood-scenarios-study/actions/workflows/ci.yml/badge.svg)](https://github.com/Abson-dev/mcf-agrifood-scenarios-study/actions/workflows/ci.yml)
 
-**Countries**
+Survey microdata acquisition and source documentation for the Mastercard Foundation
+agrifood scenarios study, implemented with IFPRI. The study builds an **agrifood
+employment baseline for 17 African countries** from national labour force and household
+survey microdata. This repository holds the access register, the verified source
+matrix and the tooling that keeps them consistent. It never holds the microdata itself.
 
-- MCF focus countries (6): Nigeria, Kenya, Uganda, Ethiopia, Ghana, Rwanda
-- Agriculture-programming countries (3): Malawi, Mozambique, Tanzania
-- WAEMU member states (8): Benin, Burkina Faso, Côte d'Ivoire, Guinea-Bissau,
-  Mali, Niger, Senegal, Togo
+> **Status (9 Nov 2026):** all 17 countries identified against live catalogs. No
+> microdata downloaded yet — institutional accounts pending. Estimation starts Week 5.
 
-## Layout
+## Coverage
 
-```
-registers/            Access register and source matrix (Excel)
-  Data Access Register.xlsx                    routes, country register, action list
-  Source matrix - working (Phase 2 Sheet 3).xlsx  verified sources, flags, account checklist
-scripts/
-  build_source_matrix.py                       regenerates the source matrix workbook
-docs/questionnaires/  Survey questionnaires and documentation (PDFs from catalogs)
-data/raw/             Downloaded microdata — NOT tracked in git
-data/processed/       Harmonised extracts — NOT tracked in git
-```
+| Group | Countries | Main instrument |
+|---|---|---|
+| MCF focus (6) | Nigeria, Kenya, Uganda, Ethiopia, Ghana, Rwanda | Labour force surveys (Kenya: continuous household survey module; Ethiopia: integrated household survey module) |
+| Agriculture programming (3) | Malawi, Mozambique, Tanzania | LFS (Malawi, Tanzania); household budget survey with employment module (Mozambique) |
+| WAEMU (8) | Benin, Burkina Faso, Côte d'Ivoire, Guinea-Bissau, Mali, Niger, Senegal, Togo | EHCVM harmonised living-conditions survey with employment module |
 
-## Microdata policy
+### Access status by country
 
-Microdata files are kept locally only. They are excluded by `.gitignore` because the
-data-use terms of the World Bank Microdata Library, national statistics offices and
-other hosts prohibit sharing files with third parties. Record each dataset's source,
-round, sample and access status in the source matrix instead.
+| Country | Most recent round | Access | Open issue |
+|---|---|---|---|
+| Nigeria | NLFS Q1 2024; Q2 2024–Q2 2025 | Registration | Confirm all quarters in release |
+| Kenya | KCHSP 2022 | Registration | ILFS 2026 fielded, not released |
+| Uganda | Labour Market Survey 2025 | 10% sample public; full file by request | Request to UBOS |
+| Ethiopia | NIHS 2024/25 labour module | Not released | Request to ESS |
+| Ghana | QLFS 2025 Q1–Q3 | Registration | Q1 file missing |
+| Rwanda | LFS 2025 | Public use | Working age 16+ |
+| Tanzania | ILFS 2025 | Public use | — |
+| Malawi | LFS 2024 | Not released | Request to NSO; IHS6 available |
+| Mozambique | IOF 2022 | Formal request | Request to INE |
+| WAEMU ×8 | EHCVM-2 2021/22 | Registration (WB MDL) | EHCVM-3 2025/26 fielded, not released |
 
-## Recording rules
+Full detail, caveats and evidence links: [`metadata/sources.csv`](metadata/sources.csv);
+decisions pending: [`metadata/flags.csv`](metadata/flags.csv).
 
-- Record the **instrument type** (labour force survey, EHCVM living-conditions survey,
-  continuous household survey module, …), not just the file. It determines how much
-  labour detail is available.
-- If the most recent round is not available, **do not substitute** an older round or a
-  different survey. Record what exists and what access requires, and flag it.
-
-## Regenerating the source matrix
+## Repository structure
 
 ```
-python scripts/build_source_matrix.py "registers/Source matrix - working (Phase 2 Sheet 3).xlsx"
+.
+├── metadata/                 Source of truth (CSV, reviewed via pull requests)
+│   ├── sources.csv           One row per survey: agency, instrument, round, sample, access, caveats, evidence
+│   ├── flags.csv             Gaps and decisions for the study lead
+│   └── portals.csv           Accounts and download checklist
+├── registers/                Excel deliverables
+│   ├── Data Access Register.xlsx   Access routes, country register, sequenced actions
+│   └── source_matrix.xlsx          Generated from metadata/ — do not edit by hand
+├── scripts/
+│   ├── build_source_matrix.py      metadata/*.csv → registers/source_matrix.xlsx
+│   ├── validate_metadata.py        Completeness checks on sources.csv
+│   └── check_no_microdata.py       Guard against committing microdata
+├── docs/
+│   ├── data-access-protocol.md     How sources are identified, verified and recorded
+│   ├── data-management-plan.md     Storage, licences, confidentiality
+│   └── questionnaires/             Survey instruments and catalog documentation
+└── data/                     Local only — ignored by git
+    ├── raw/                  Microdata as downloaded
+    └── processed/            Harmonised extracts
 ```
 
-Requires `openpyxl`.
+## Getting started
+
+Requires Python 3.10+.
+
+```bash
+python -m pip install -r requirements.txt
+python scripts/validate_metadata.py     # check the register
+python scripts/build_source_matrix.py   # regenerate registers/source_matrix.xlsx
+```
+
+To record a new or updated source, edit `metadata/sources.csv`, run both scripts and open
+a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Data governance
+
+- **No microdata in git.** Data-use agreements of the World Bank Microdata Library and the
+  national statistics offices prohibit redistribution. `.gitignore` and CI
+  (`check_no_microdata.py`) enforce this. Details in the
+  [data management plan](docs/data-management-plan.md).
+- **No silent substitution.** If the most recent round is unavailable, it is recorded as a
+  gap with what access would require — never replaced by an older round or another survey.
+- **Instrument type is recorded** for every source, because it determines labour detail
+  (LFS vs EHCVM employment module vs continuous household survey module).
+
+See the [data access protocol](docs/data-access-protocol.md).
+
+## Citation
+
+See [CITATION.cff](CITATION.cff). Cite each dataset as required by its producer's terms
+of use (listed in the catalog entry linked in `sources.csv`).
+
+## Licence
+
+Internal project repository — all rights reserved pending agreement with IFPRI on a
+licence. Survey data and documentation remain the property of their producers.
+
+## Contact
+
+Aboubacar Hema — aboubacarhema94@gmail.com
