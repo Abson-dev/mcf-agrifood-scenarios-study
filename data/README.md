@@ -26,7 +26,7 @@ data/
 |---|---|---|---|---|---|
 | `BEN_EHCVM-2_2021` | BEN_2021_EHCVM-2_v01_M_STATA14 | 60 .dta | 8,032 | 42,660 | |
 | `BFA_EHCVM-2_2021` | BFA_2021_EHCVM-2_v01_M_Stata | 55 .dta | 7,176 | 47,090 | Welfare file is `ehcvm_welfare_2b_bfa2021.dta` |
-| `CIV_EHCVM-2_2021` | CIV_2021_EHCVM-2_v01_M_STATA14 | 58 .dta | 12,965 (of 13,693) | 64,491 | 728 HH missing from harmonised files; duplicates in `ehcvm_menage` |
+| `CIV_EHCVM-2_2021` | CIV_2021_EHCVM-2_v01_M_STATA14 | 58 .dta | 12,965 | 64,491 | Catalog's 13,693 includes 728 non-completed interviews (`s00q08`=3); dedupe `ehcvm_menage` |
 | `GNB_EHCVM-2_2021` | GNB_2021_EHCVM-2_v01_M_STATA14 | 60 .dta | 5,351 | 41,160 | |
 | `MLI_EHCVM-2_2021` | MLI_2021_EHCVM-2_v01_M_STATA14 | 49 .dta | 6,143 | 43,472 | Security gaps in wave 1 (see sources.csv) |
 | `NER_EHCVM-2_2021` | NER_2021_EHCVM-2_v01_M_STATA14 | 54 .dta | 6,622 | 38,753 | |

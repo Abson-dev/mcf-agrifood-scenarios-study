@@ -17,7 +17,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
 ### Flagged
-- Côte d'Ivoire: harmonised EHCVM-2 files cover 12,965 of 13,693 households.
+- Côte d'Ivoire: catalog sample of 13,693 includes 728 non-completed interviews; 12,965 completed
+  households are complete in all files. Initially misreported as a data gap (corrected).
 
 ### Changed
 - Repository structure, data access protocol, data management plan, CI checks.
