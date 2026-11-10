@@ -20,8 +20,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - AHIES 2024 Q1–Q4 in `data/raw/focus-countries/GHA_AHIES_2022-24/`: 188,500 person-quarters,
   39,298 HH-quarters (= GLD 2024 header), quarterly `pop_weight`, 4/6-digit ISIC. 2022–2023
   not yet downloaded. DDI study documentation for AHIES and QLFS 2025.
-- QLFS 2025 data still pending: GSS catalog lists only a Q2–Q3 file; the GSS site's account
-  emails (password reset, registration) were failing on 10 Nov 2026.
+- QLFS 2025 Q2–Q3 in `data/raw/focus-countries/GHA_QLFS_2025/`: 27,837 HH, 121,665 persons
+  (= catalog), identical in .dta/.sav/.csv. No Q1 records despite the 'Q1–Q3' title (flag 7).
+  The GSS site's account emails were failing on 10 Nov 2026; login later succeeded.
 - Kenya Poverty Report 2022 added to `KEN_KCHSP_2022/documentation/`.
 
 ### Added (Kenya)
