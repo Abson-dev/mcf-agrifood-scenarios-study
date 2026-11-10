@@ -1,4 +1,6 @@
 group,dataset,path,bytes,sha256,file_date
+ag-programming,MOZ_HMLMD_1996-2023,ag-programming/MOZ_HMLMD_1996-2023/documentation/HMLMD-report-documentation-2026-por.pdf,414770,1c64bcf92ac55962b687ced58a2da4618f86e68a02e3a798883bf297e0685d7d,2026-11-10
+ag-programming,MOZ_HMLMD_1996-2023,ag-programming/MOZ_HMLMD_1996-2023/documentation/codebook-HMLMD-2026.xlsx,8309,51790746e000ecc3c717a6a82b4b9b6fe8cbda737d8c498be43869fb54db8784,2026-11-10
 ag-programming,MWI_IHS6_2024-25,ag-programming/MWI_IHS6_2024-25/documentation/ihs6_ag_fishery_qx_enumerator_manual.pdf,1567061,5e41ccdaf986b933ae3f79ebdf93d15674a463a78d44b5f48d936e136c19a584,2026-11-09
 ag-programming,MWI_IHS6_2024-25,ag-programming/MWI_IHS6_2024-25/documentation/ihs6_cross_section_report.pdf,20985314,e660cd140a8fa79504bc4b3244bd9dc2af60a59f83c7ad418001d25800f7c00d,2026-11-09
 ag-programming,MWI_IHS6_2024-25,ag-programming/MWI_IHS6_2024-25/documentation/ihs6_hh_qx_enumerator_manual.pdf,2751007,137bc09781c1d79735690b2fd19218e152df4fa3ec225f500aafe5cfc9a2b648,2026-11-09
