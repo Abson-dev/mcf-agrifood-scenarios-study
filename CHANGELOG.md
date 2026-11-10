@@ -17,9 +17,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
 ### Added (Ghana)
-- AHIES 2024 Q1–Q4 in `data/raw/focus-countries/GHA_AHIES_2022-24/`: 188,500 person-quarters,
-  39,298 HH-quarters (= GLD 2024 header), quarterly `pop_weight`, 4/6-digit ISIC. 2022–2023
-  not yet downloaded. DDI study documentation for AHIES and QLFS 2025.
+- AHIES 2022, 2023 and 2024 (Q1–Q4 each) in `data/raw/focus-countries/GHA_AHIES_2022-24/`,
+  organised by year: 209,943 / 196,953 / 188,500 person-quarters; quarterly `pop_weight`;
+  4/6-digit ISIC. Household-level sections 5–7 files included. DDI study documentation for
+  AHIES and QLFS 2025.
+- Flagged: GSS's 2023 sections 5–7 .sav contains 2024 data, and the 2022 sections 5–7 labels
+  CSV was an incomplete download. Both set aside; complete equivalents are in hand.
 - QLFS 2025 Q2–Q3 in `data/raw/focus-countries/GHA_QLFS_2025/`: 27,837 HH, 121,665 persons
   (= catalog), identical in .dta/.sav/.csv. No Q1 records despite the 'Q1–Q3' title (flag 7).
   The GSS site's account emails were failing on 10 Nov 2026; login later succeeded.
