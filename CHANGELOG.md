@@ -16,6 +16,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Added (Ghana)
+- AHIES 2024 Q1–Q4 in `data/raw/focus-countries/GHA_AHIES_2022-24/`: 188,500 person-quarters,
+  39,298 HH-quarters (= GLD 2024 header), quarterly `pop_weight`, 4/6-digit ISIC. 2022–2023
+  not yet downloaded. DDI study documentation for AHIES and QLFS 2025.
+- QLFS 2025 data still pending: GSS catalog lists only a Q2–Q3 file; the GSS site's account
+  emails (password reset, registration) were failing on 10 Nov 2026.
+- Kenya Poverty Report 2022 added to `KEN_KCHSP_2022/documentation/`.
+
 ### Added (Kenya)
 - KCHSP 2022 in `data/raw/focus-countries/KEN_KCHSP_2022/`: 17,894 HH, 71,239 persons,
   four quarters, 47 counties. Year confirmed from the data; 4-digit ISIC for main jobs.

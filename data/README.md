@@ -52,10 +52,12 @@ Nigeria is complete: six consecutive quarters, Q1 2024 to Q2 2025.
 |---|---|---|---|---|---|
 | `RWA_LFS_2025` | RWA-NISR-RLFS-2025-v0.1 (`RW_LFS2025`) | .dta + .csv (identical) + variable list | 14,528 | 100,852 | Labour status derived for 14+ (so 15+ can be built). Annual weight `weight2`; no quarter ID. ISIC/ISCO 2-digit only, so food trade can't be split out of 46/47 |
 
-| `KEN_KCHSP_2022` | KCHSP 2022 (KeNADA catalog 131) | 5 .dta: households, individuals, consumption aggregate, food items, non-food items | 17,894 | 71,239 | No year in file names; 2022 confirmed from the data. Annual labour weight `annual_indweight_labour`; quarterly `individual_weight_labour`; don't sum `weight_pop` over persons. Main-job 4-digit ISIC in `d23_isic`. Original individuals zip in `_download/`. No documentation yet |
+| `KEN_KCHSP_2022` | KCHSP 2022 (KeNADA catalog 131) | 5 .dta: households, individuals, consumption aggregate, food items, non-food items | 17,894 | 71,239 | No year in file names; 2022 confirmed from the data. Annual labour weight `annual_indweight_labour`; quarterly `individual_weight_labour`; don't sum `weight_pop` over persons. Main-job 4-digit ISIC in `d23_isic`. Original individuals zip in `_download/`. `documentation/` holds the Kenya Poverty Report 2022 (no questionnaire yet) |
+| `GHA_AHIES_2022-24` | AHIES 2024 Q1–Q4, GSS release 27 Aug 2025 (GSS catalog 128) | 1 .dta (person-quarter, 838 vars) | 39,298 HH-quarters (9,699–9,890 per quarter) | 188,500 person-quarters | **2024 only**: 2022 and 2023 not yet downloaded. `pop_weight` is quarterly (≈32M per quarter), so divide by 4 when pooling the year. Quarter in `quarter` (2024Q1–Q4). `hhid` changes every quarter, so it can't link households across quarters. Age `s1aq4y`. ISIC/ISCO coded at 4 and 6 digits for main and secondary jobs (`s4aq41a2`/`a3`), so food trade can be separated. Employed 15+ ≈12.0–12.7M per quarter. Labels are Latin-1 (read with `encoding="latin1"`). Original zip in `_download/`; `documentation/` holds the DDI study documentation (v2.1) |
+| `GHA_QLFS_2025` | QLFS 2025 Q1–Q3 (GSS catalog 132) | — | — | — | **Data not yet downloaded.** `documentation/` holds the DDI study documentation only. The catalog lists one file, `2025QLFS_Q2-Q3` (121,665 cases, 524 vars): Q1 is still missing |
 
-Still pending: Ghana downloads; Uganda
-and Ethiopia formal requests (see `metadata/portals.csv`).
+Still pending: Ghana QLFS 2025 data and AHIES 2022–2023; Uganda and Ethiopia formal
+requests (see `metadata/portals.csv`).
 
 ### ag-programming/
 
