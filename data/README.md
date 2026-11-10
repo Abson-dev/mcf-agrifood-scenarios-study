@@ -52,7 +52,7 @@ Nigeria is complete: six consecutive quarters, Q1 2024 to Q2 2025.
 |---|---|---|---|---|---|
 | `RWA_LFS_2025` | RWA-NISR-RLFS-2025-v0.1 (`RW_LFS2025`) | .dta + .csv (identical) + variable list | 14,528 | 100,852 | Labour status derived for 14+ (so 15+ can be built). Annual weight `weight2`; no quarter ID. ISIC/ISCO 2-digit only, so food trade can't be split out of 46/47 |
 
-| `KEN_KCHSP_2022` | KCHSP 2022 (KeNADA catalog 131) | 5 .dta: households, individuals, consumption aggregate, food items, non-food items | 17,894 | 71,239 | No year in file names; 2022 confirmed from the data. Annual labour weight `annual_indweight_labour`; quarterly `individual_weight_labour`; don't sum `weight_pop` over persons. Main-job 4-digit ISIC in `d23_isic`. Original individuals zip in `_download/`. No documentation yet |
+| `KEN_KCHSP_2022` | KCHSP 2022 (KeNADA catalog 131) | 5 .dta: households, individuals, consumption aggregate, food items, non-food items | 17,894 | 71,239 | No year in file names; 2022 confirmed from the data. Annual labour weight `annual_indweight_labour`; quarterly `individual_weight_labour`; don't sum `weight_pop` over persons. Main-job 4-digit ISIC in `d23_isic`. Original individuals zip in `_download/`. **Public subset only**: restricted to the consumption sample (design 24,000 HH) and to the roster, education and labour modules (households file 45 vars; no agriculture or enterprise modules). Full dataset to be requested from KNBS. No documentation yet |
 
 Still pending: Ghana downloads; Uganda
 and Ethiopia formal requests (see `metadata/portals.csv`).

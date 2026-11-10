@@ -20,6 +20,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - KCHSP 2022 in `data/raw/focus-countries/KEN_KCHSP_2022/`: 17,894 HH, 71,239 persons,
   four quarters, 47 counties. Year confirmed from the data; 4-digit ISIC for main jobs.
   Questionnaire still to download.
+- Flagged: KCHSP 2022 public files are a truncated subset (raised by Fantu). All files are
+  restricted to the 17,894 consumption households (design 24,000; 17,850 interviewed per the
+  Poverty Report 2022) and to the roster, education and labour modules; no agriculture or
+  enterprise modules. Full dataset to be requested from KNBS.
 
 ### Added (Rwanda)
 - LFS 2025 in `data/raw/focus-countries/RWA_LFS_2025/`: 14,528 HH, 100,852 persons
