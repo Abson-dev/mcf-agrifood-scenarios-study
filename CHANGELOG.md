@@ -16,6 +16,30 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Added (Kenya)
+- KCHSP 2022 in `data/raw/focus-countries/KEN_KCHSP_2022/`: 17,894 HH, 71,239 persons,
+  four quarters, 47 counties. Year confirmed from the data; 4-digit ISIC for main jobs.
+  Questionnaire still to download.
+
+### Added (Rwanda)
+- LFS 2025 in `data/raw/focus-countries/RWA_LFS_2025/`: 14,528 HH, 100,852 persons
+  (= catalog). Labour status is derived for 14+, so the 16+ working-age concern is
+  resolved. New limit flagged: ISIC/ISCO 2-digit only and no quarter ID.
+
+### Added (Tanzania)
+- ILFS 2025 in `data/raw/ag-programming/TZA_ILFS_2025/`: 60,889 persons (= catalog), about
+  14,217 HH, Mainland and Zanzibar. The 'For_Sharing' file has 434 vs 559 catalog variables;
+  the difference is split text segments, not missing content. Annual pooled weight.
+
+### Added (Nigeria)
+- NLFS Q2 2024–Q2 2025, all 5 quarters, in `data/raw/focus-countries/NGA_NLFS_2024Q2-2025Q2/`,
+  organised by quarter; original NBS zip kept in `_download/`. Counts and weights verified.
+- NLFS Q1 2024 in `data/raw/focus-countries/NGA_NLFS_2024Q1/`: 8,821 HH, 45,318 persons.
+  Nigeria now complete for Q1 2024–Q2 2025 (six quarters).
+- Flagged: Q3/Q4 2024 have no household file; Q2 2024 has far fewer coded main jobs,
+  mainly in agriculture. Q1 2024 (same format) is normal, so the shortfall is specific to
+  Q2 2024. Issue #10 (completeness) resolved.
+
 ### Added (GLD)
 - GLD coverage check for all 17 countries (`metadata/gld_coverage.csv`,
   `docs/gld-coverage.md`, "GLD coverage" sheet in the workbook).
