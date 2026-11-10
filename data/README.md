@@ -31,8 +31,31 @@ with an error if it finds a folder outside the three groups.
 
 ### focus-countries/
 
-None yet: Nigeria and Kenya are pending account registration; Uganda, Ethiopia, Ghana and
-Rwanda are pending downloads or formal requests (see `metadata/portals.csv`).
+| Folder | Release | Quarter | Files | Households | Individuals | Notes |
+|---|---|---|---|---|---|---|
+| `NGA_NLFS_2024Q1` | NGA-NBS-NLFS-Q12024-v1.0 (NBS catalog 151) | 2024Q1 | HH + indiv (.sav) | 8,821 | 45,318 | 21,724 coded main jobs (agriculture 7,008), in line with later quarters |
+| `NGA_NLFS_2024Q2-2025Q2` | NGA-NBS-NLFS-Q22024-v1.0 (NBS catalog 152) | 2024Q2 | HH + indiv (.sav) | 8,806 | 44,852 | **Coding shortfall:** 12,455 coded main jobs vs 17,778–21,724 in other quarters (agriculture 4,000 vs 6,580–8,625). Specific to this quarter. Check before pooling |
+| | | 2024Q3 | indiv only (.dta) | 8,802 | 43,955 | No household file; IDs and `popw` are in the individual file |
+| | | 2024Q4 | indiv only (.dta) | 8,832 | 43,728 | No household file |
+| | | 2025Q1 | HH + indiv (.dta) | 8,727 | 42,385 | |
+| | | 2025Q2 | HH + indiv (.dta) | 8,346 | 39,934 | |
+
+Nigeria layout: `<release>/<YYYYQn>/` holds the data per quarter, `documentation/` the Q2 2024
+report and questionnaire, and `_download/` the original NBS zip for Q3 2024–Q2 2025, kept
+unchanged for provenance. Weight `popw` is the population weight rescaled to NPC 2022, with
+no missing values. Cleaned ISIC/ISCO codes are available for main and secondary jobs. The
+catalog states 8,836 households per quarter.
+
+Nigeria is complete: six consecutive quarters, Q1 2024 to Q2 2025.
+
+| Folder | Release | Files | Households | Individuals | Notes |
+|---|---|---|---|---|---|
+| `RWA_LFS_2025` | RWA-NISR-RLFS-2025-v0.1 (`RW_LFS2025`) | .dta + .csv (identical) + variable list | 14,528 | 100,852 | Labour status derived for 14+ (so 15+ can be built). Annual weight `weight2`; no quarter ID. ISIC/ISCO 2-digit only, so food trade can't be split out of 46/47 |
+
+| `KEN_KCHSP_2022` | KCHSP 2022 (KeNADA catalog 131) | 5 .dta: households, individuals, consumption aggregate, food items, non-food items | 17,894 | 71,239 | No year in file names; 2022 confirmed from the data. Annual labour weight `annual_indweight_labour`; quarterly `individual_weight_labour`; don't sum `weight_pop` over persons. Main-job 4-digit ISIC in `d23_isic`. Original individuals zip in `_download/`. No documentation yet |
+
+Still pending: Ghana downloads; Uganda
+and Ethiopia formal requests (see `metadata/portals.csv`).
 
 ### ag-programming/
 
@@ -40,7 +63,9 @@ Rwanda are pending downloads or formal requests (see `metadata/portals.csv`).
 |---|---|---|---|---|---|
 | `MWI_IHS6_2024-25` | MWI_2024-2025_IHS-VI_v01_M_STATA14 | 81 .dta | 12,888 | 55,911 | Integrated household survey; labour module `hh_mod_e`. **Not** a substitute for the Malawi LFS 2024 |
 
-Mozambique (IOF 2022) and Malawi LFS 2024 are pending formal requests; Tanzania ILFS 2025 is pending download.
+| `TZA_ILFS_2025` | TZA-NBS-2025-v01 (`ILFS2025_URT_For_Sharing.sav`) | 1 .sav | ~14,217 (Zanzibar 3,647) | 60,889 | Annual weight: `weight` sums to the population over the 4 quarters, so quarterly estimates need ×4. Quarter in `qrt`. Labels in Swahili |
+
+Mozambique (IOF 2022) and Malawi LFS 2024 are pending formal requests.
 
 ### waemu/
 
