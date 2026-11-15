@@ -10,3 +10,4 @@ NBS Tanzania TNADA (extra),https://microdata.nbs.go.tz,ILFS 2025 (65),Registered
 INE Moçambique (formal request),https://mozdata.ine.gov.mz,IOF 2022 (79),Request not lodged,—
 ESS Ethiopia (formal request),https://ess.gov.et,NIHS 2024/25 labour module,Request not lodged,—
 NSO Malawi (formal request),https://nsomalawi.mw,LFS 2024,Request not lodged,—
+ANSD ANADS (Senegal),https://anads.ansd.sn,"ENES 2025 Q1–Q4 (catalogs 328, 336, 347, 352)",Registered; API key in git-ignored .env (ANSD_NADA_API_KEY),"Requests 3589–3592 submitted 15 Nov 2026, awaiting approval. Documentation and questionnaire IN HAND"
