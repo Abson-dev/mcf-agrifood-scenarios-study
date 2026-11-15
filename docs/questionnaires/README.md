@@ -11,6 +11,7 @@ Survey instruments downloaded from the World Bank Microdata Library on 9 Nov 202
 | `NGA_NLFS_2024-25/` | Nigeria NLFS 2024–25 | NLFS questionnaire, from the NBS download |
 | `TZA_ILFS_2025/` | Tanzania ILFS 2025 | ILFS questionnaire (English), from the TNADA download |
 | `RWA_LFS_2025/` | Rwanda LFS 2025 | LFS questionnaire (English), from the NISR download |
+| `SEN_ENES_2025/` | Senegal ENES 2025 | ENES questionnaire (French, version of 20 Feb 2025; a .docx file despite the .doc name), from the ANSD API |
 
 The employment section of the EHCVM household questionnaire is **Section 4** (data files
 `s04a_me`–`s04c_me`). The IHS6 labour module is **Module E** (`hh_mod_e`).

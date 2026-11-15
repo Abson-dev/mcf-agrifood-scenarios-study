@@ -78,6 +78,7 @@ Mozambique (IOF 2022) and Malawi LFS 2024 are pending formal requests.
 | `MLI_EHCVM-2_2021` | MLI_2021_EHCVM-2_v01_M_STATA14 | 49 .dta | 6,143 | 43,472 | Security gaps in wave 1 (see sources.csv) |
 | `NER_EHCVM-2_2021` | NER_2021_EHCVM-2_v01_M_STATA14 | 54 .dta | 6,622 | 38,753 | |
 | `SEN_EHCVM-2_2021` | SEN_2021_EHCVM-2_v01_M_STATA14 | 58 .dta | 7,120 | 63,530 | |
+| `SEN_ENES_2025` | ENES 2025 (ANSD catalogs 328, 336, 347, 352) | documentation only | — | — | Licensed data **requested 15 Nov 2026** (n° 3589–3592), awaiting approval. `documentation/` holds the Q1–Q4 2025 reports, interviewer manual and methodology note |
 | `TGO_EHCVM-2_2021` | TGO_2021_EHCVM-2_v01_M_STATA14 | 57 .dta | 6,462 | 28,815 | |
 | `BFA_EHCVM-P_2021` | BFA_2021_EHCVM-P_v05_M_Stata | 55 .dta | 3,227 | 22,362 | Panel sub-sample (from EHCVM-1 2018/19); not the baseline sample |
 

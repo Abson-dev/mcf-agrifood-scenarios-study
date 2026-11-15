@@ -16,6 +16,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Access (Senegal)
+- ENES 2025: online licensed-data requests submitted to ANSD on 15 Nov 2026 (T1 n° 3591, T2 n° 3592,
+  T3 n° 3590, T4 n° 3589). Reports, manual, methodology note and questionnaire downloaded via the
+  ANSD API; licensed microdata must be downloaded from the request pages once approved.
+
 ### Added (Kenya)
 - KCHSP 2022 in `data/raw/focus-countries/KEN_KCHSP_2022/`: 17,894 HH, 71,239 persons,
   four quarters, 47 counties. Year confirmed from the data; 4-digit ISIC for main jobs.
