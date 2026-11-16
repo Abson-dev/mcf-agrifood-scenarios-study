@@ -57,6 +57,7 @@ Nigeria is complete: six consecutive quarters, Q1 2024 to Q2 2025.
 | Folder | Release | Files | Households | Individuals | Notes |
 |---|---|---|---|---|---|
 | `UGA_LMS_2025` | DDI-UGA-UBOS-LMS-2025-V01 (UBOS catalog 106), **10% public sample** | household module (1 .dta) + establishment module (main file, job titles) | — (no HH ID) | 4,887 | One row per person; 1,245 employed, all with 4-digit ISIC (`new_ISICC7`) and ISCO. No household, cluster or stratum ID. `Annual_wgt` sums to ~10% of the population (rescale for levels). `qrtr` has 3 values vs 2 phases in the report. Use `Labour_status`, not `Indu_w`. `C5` holds employer names: keep restricted. 610 establishments, 2,508 job titles. Full sample (9,850 HH) needs a UBOS request |
+| `UGA_NLFS_2021` | DDI-UGA-UBOS-NLFS-2021-v01 (UBOS catalog 98), **10% public sample**, previous round for reference only | 1 .dta + main report + DDI documentation | 3,689 (incomplete) | 4,769 | Sample drawn among persons (1–5 per household). 1,190 with main-job 4-digit ISIC (`new_ISICC7`), same variable names as LMS 2025. Has `hhid`, `clusterno`, EA. `finalwgt` sums to ~10% of the population. No derived labour status. Holds district and EA names: keep restricted. **Not** a substitute for LMS 2025 |
 
 Still pending: Uganda full LMS sample and Ethiopia formal requests (see `metadata/portals.csv`).
 
