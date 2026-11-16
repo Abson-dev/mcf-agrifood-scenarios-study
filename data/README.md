@@ -65,6 +65,8 @@ and Ethiopia formal requests (see `metadata/portals.csv`).
 
 | `TZA_ILFS_2025` | TZA-NBS-2025-v01 (`ILFS2025_URT_For_Sharing.sav`) | 1 .sav | ~14,217 (Zanzibar 3,647) | 60,889 | Annual weight: `weight` sums to the population over the 4 quarters, so quarterly estimates need ×4. Quarter in `qrt`. Labels in Swahili |
 
+| `MOZ_HMLMD_1996-2023` | UNU-WIDER HMLMD, version Sep 2026 (`microeconomic-labour-market/`) | `surveys_clean.dta`, `surveys_clean_compress.dta`, `surveys_clean.rds` (3 formats) | 65,258 HH-rounds | 165,370 | Downloaded 16 Nov 2026 via the WIDER form; zip in `_download/`. Six rounds (IAF 1996/97, 2002/03; IOF 2008/09, 2014/15, 2019/20, 2022/23: 14,624 HH, 35,232 persons). Ages 15–65 only; **no ISIC codes** (11 broad sectors), so only agriculture is identifiable. Household weight `hh_weight`. Not a substitute for IOF 2022 |
+
 Mozambique (IOF 2022) and Malawi LFS 2024 are pending formal requests.
 
 ### waemu/

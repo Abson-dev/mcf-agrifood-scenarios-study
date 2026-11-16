@@ -16,6 +16,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Added (Mozambique)
+- UNU-WIDER HMLMD 1996–2023 (suggested by John) recorded in `sources.csv` as a harmonised
+  derivative alongside IOF 2022. Codebook and report in
+  `data/raw/ag-programming/MOZ_HMLMD_1996-2023/documentation/`. Data downloaded on 16 Nov 2026
+  once the WIDER form worked (it returned 403 on 10 Nov): 165,370 persons aged 15–65, 6 rounds
+  1996/97–2022/23, in `microeconomic-labour-market/`. No ISIC codes (11 broad sectors) and ages 15–65 only, so it cannot separate
+  agrifood beyond agriculture; the INE request for raw IOF 2022 stays open (flag 4).
+
 ### Added (Kenya)
 - KCHSP 2022 in `data/raw/focus-countries/KEN_KCHSP_2022/`: 17,894 HH, 71,239 persons,
   four quarters, 47 counties. Year confirmed from the data; 4-digit ISIC for main jobs.
