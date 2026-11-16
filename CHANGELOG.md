@@ -16,6 +16,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Access (Mozambique)
+- INE mozdata account active and API key stored in `.env` (`INE_MOZ_NADA_API_KEY`).
+- IOF 2022 (n° 276) and INFOR 2021/22 (n° 277): licensed online requests submitted and approved on
+  16 Nov 2026; data downloaded via the INE API.
+  - IOF 2022: 18 .sav files, 15,385 HH, 70,470 persons; fieldwork Jan 2022–Jan 2023. The employment
+    module is in `01-Membros` with ISIC/CAE 3-digit industry codes for all 28,267 employed.
+    `02-Habitacao` is truncated on the INE server (4 MiB); kept apart, re-upload to request.
+  - INFOR 2021/22: 12,534 persons aged 7+; weights by province only. All uploaded versions compared;
+    the .rar contents are byte-identical to the held files.
+- IAI 2023 (public) in `data/raw/ag-programming/MOZ_IAI_2023/`: 20,402 small and medium holdings,
+  98,856 persons. Farm survey with no industry codes, recorded alongside IOF 2022, not as a substitute.
+
 ### Added (Kenya)
 - KCHSP 2022 in `data/raw/focus-countries/KEN_KCHSP_2022/`: 17,894 HH, 71,239 persons,
   four quarters, 47 counties. Year confirmed from the data; 4-digit ISIC for main jobs.

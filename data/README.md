@@ -65,7 +65,11 @@ and Ethiopia formal requests (see `metadata/portals.csv`).
 
 | `TZA_ILFS_2025` | TZA-NBS-2025-v01 (`ILFS2025_URT_For_Sharing.sav`) | 1 .sav | ~14,217 (Zanzibar 3,647) | 60,889 | Annual weight: `weight` sums to the population over the 4 quarters, so quarterly estimates need ×4. Quarter in `qrt`. Labels in Swahili |
 
-Mozambique (IOF 2022) and Malawi LFS 2024 are pending formal requests.
+| `MOZ_IAI_2023` | MOZ.INE.IAI.2022.v2 (INE catalog 115; `DATA_PME_IAI2023.zip`) | 36 .dta | 20,402 holdings | 98,856 | Integrated Agricultural Survey, campaign 2022/23, small and medium holdings only (no large holdings). Roster has yes/no activity questions only, no industry codes: **not** an employment source. Holding weight `wgt` in `weight_iai.dta`. Zip repaired (INE server shifts files by one byte), all CRCs verified |
+| `MOZ_INFOR_2021-22` | MOZ-INE.INFOR2021-2022.V2.C321.41 (INE catalog 89) | `_BM.dta` + `_BM.sav` (same data; .sav keeps full variable names) | — | 12,534 (aged 7+) | Informal sector survey, licensed (n° 277, approved 16 Nov 2026). Weight has 11 values (one per province). Activity in `ACTIVIDADE_PRINCIPAL`, `F1_B_ACTIVIDADE_PRINC`, `SUB_SECTOR` (CAE). Other uploads in `_download/` are the same persons |
+| `MOZ_IOF_2022` | MOZ-INE.IOF2022.V5.C321 (INE catalog 79) | 18 .sav | 15,385 | 70,470 | Licensed (n° 276, approved 16 Nov 2026). Fieldwork Jan 2022–Jan 2023. Employment module in `01-Membros` (EM01–EM31): 28,267 employed, ISIC/CAE 3-digit `EM13_COD` (leading zero dropped). Weight `Weight`. **`02-Habitacao` truncated on the server** at 4 MiB, in `_incomplete_download/` |
+
+Mozambique: IOF 2022 housing file to be re-uploaded by INE. Malawi LFS 2024 is pending a formal request.
 
 ### waemu/
 
