@@ -65,7 +65,10 @@ and Ethiopia formal requests (see `metadata/portals.csv`).
 
 | `TZA_ILFS_2025` | TZA-NBS-2025-v01 (`ILFS2025_URT_For_Sharing.sav`) | 1 .sav | ~14,217 (Zanzibar 3,647) | 60,889 | Annual weight: `weight` sums to the population over the 4 quarters, so quarterly estimates need ×4. Quarter in `qrt`. Labels in Swahili |
 
-Mozambique (IOF 2022) and Malawi LFS 2024 are pending formal requests.
+| `MOZ_IAI_2023` | MOZ.INE.IAI.2022.v2 (INE catalog 115; `DATA_PME_IAI2023.zip`) | 36 .dta | 20,402 holdings | 98,856 | Integrated Agricultural Survey, campaign 2022/23, small and medium holdings only (no large holdings). Roster has yes/no activity questions only, no industry codes: **not** an employment source. Holding weight `wgt` in `weight_iai.dta`. Zip repaired (INE server shifts files by one byte), all CRCs verified |
+| `MOZ_IOF_2022` | IOF 2022 (INE catalog 79) | documentation only (questionnaires, interviewer manual) | — | — | Licensed data **requested 16 Nov 2026** (n° 276) |
+
+Mozambique IOF 2022 (n° 276) and INFOR 2021/22 (n° 277) are requested from INE; Malawi LFS 2024 is pending a formal request.
 
 ### waemu/
 
