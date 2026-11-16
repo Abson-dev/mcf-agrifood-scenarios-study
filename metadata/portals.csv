@@ -7,6 +7,6 @@ UBOS microdata archive (extra),http://microdata.ubos.org:7070,LMS 2025 10% file 
 GSS microdata catalog (extra),https://microdata.statsghana.gov.gh,QLFS 2025 (132); AHIES 2022–24 (128),Not registered,—
 NISR microdata (extra),https://microdata.statistics.gov.rw,LFS 2025 (125),Registered,LFS 2025 IN HAND
 NBS Tanzania TNADA (extra),https://microdata.nbs.go.tz,ILFS 2025 (65),Registered,ILFS 2025 IN HAND
-INE Moçambique (formal request),https://mozdata.ine.gov.mz,"IOF 2022 (79), INFOR 2021/22 (89), IAI 2023 (115)",Account active (16 Nov 2026); API key in git-ignored .env (INE_MOZ_NADA_API_KEY),IAI 2023 IN HAND; IOF 2022 requested (n° 276); INFOR 2021/22 requested (n° 277)
+INE Moçambique (formal request),https://mozdata.ine.gov.mz,"IOF 2022 (79), INFOR 2021/22 (89), IAI 2023 (115)",Account active (16 Nov 2026); API key in git-ignored .env (INE_MOZ_NADA_API_KEY),"IAI 2023, IOF 2022 (n° 276) and INFOR 2021/22 (n° 277) IN HAND (16 Nov 2026); IOF housing file truncated on server"
 ESS Ethiopia (formal request),https://ess.gov.et,NIHS 2024/25 labour module,Request not lodged,—
 NSO Malawi (formal request),https://nsomalawi.mw,LFS 2024,Request not lodged,—
