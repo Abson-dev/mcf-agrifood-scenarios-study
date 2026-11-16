@@ -54,8 +54,11 @@ Nigeria is complete: six consecutive quarters, Q1 2024 to Q2 2025.
 
 | `KEN_KCHSP_2022` | KCHSP 2022 (KeNADA catalog 131) | 5 .dta: households, individuals, consumption aggregate, food items, non-food items | 17,894 | 71,239 | No year in file names; 2022 confirmed from the data. Annual labour weight `annual_indweight_labour`; quarterly `individual_weight_labour`; don't sum `weight_pop` over persons. Main-job 4-digit ISIC in `d23_isic`. Original individuals zip in `_download/`. No documentation yet |
 
-Still pending: Ghana downloads; Uganda
-and Ethiopia formal requests (see `metadata/portals.csv`).
+| Folder | Release | Files | Households | Individuals | Notes |
+|---|---|---|---|---|---|
+| `UGA_LMS_2025` | DDI-UGA-UBOS-LMS-2025-V01 (UBOS catalog 106), **10% public sample** | household module (1 .dta) + establishment module (main file, job titles) | — (no HH ID) | 4,887 | One row per person; 1,245 employed, all with 4-digit ISIC (`new_ISICC7`) and ISCO. No household, cluster or stratum ID. `Annual_wgt` sums to ~10% of the population (rescale for levels). `qrtr` has 3 values vs 2 phases in the report. Use `Labour_status`, not `Indu_w`. `C5` holds employer names: keep restricted. 610 establishments, 2,508 job titles. Full sample (9,850 HH) needs a UBOS request |
+
+Still pending: Uganda full LMS sample and Ethiopia formal requests (see `metadata/portals.csv`).
 
 ### ag-programming/
 

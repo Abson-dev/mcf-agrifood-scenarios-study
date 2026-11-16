@@ -16,6 +16,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Added (Uganda)
+- LMS 2025 10% public files in `data/raw/focus-countries/UGA_LMS_2025/`: 4,887 persons (1,245 employed, all with
+  4-digit ISIC/ISCO), 610 establishments, questionnaire and main report. No household or cluster IDs; weights sum
+  to ~10% of the population. Full sample (9,850 HH) still needs a UBOS request (flag 3).
+
 ### Added (Kenya)
 - KCHSP 2022 in `data/raw/focus-countries/KEN_KCHSP_2022/`: 17,894 HH, 71,239 persons,
   four quarters, 47 counties. Year confirmed from the data; 4-digit ISIC for main jobs.
