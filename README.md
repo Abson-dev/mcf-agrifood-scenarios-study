@@ -8,10 +8,11 @@ employment baseline for 17 African countries** from national labour force and ho
 survey microdata. This repository holds the access register, the verified source
 matrix and the tooling that keeps them consistent. It never holds the microdata itself.
 
-> **Status (9 Nov 2026):** all 17 countries identified against live catalogs. In hand:
-> EHCVM-2 2021/22 for all 8 WAEMU states, the Burkina Faso EHCVM panel (v05) and Malawi
-> IHS6 2024/25 (see [`data/README.md`](data/README.md)). Other countries are pending accounts
-> and requests. Estimation starts Week 5.
+> **Status (16 Nov 2026):** in hand for Nigeria, Kenya (public subset), Ghana, Rwanda, Tanzania,
+> Uganda (10% public sample) and the 8 WAEMU states (EHCVM-2). Licensed requests submitted online
+> for Senegal ENES 2025 (ANSD) and Mozambique IOF 2022 and INFOR 2021/22 (INE). Formal requests to
+> ESS, KNBS, UBOS and NSO Malawi are drafted and wait on the signatory. Some of this is still in open
+> pull requests #22–#27. Holdings: [`data/README.md`](data/README.md).
 
 ## Coverage
 
@@ -25,16 +26,17 @@ matrix and the tooling that keeps them consistent. It never holds the microdata 
 
 | Country | Most recent round | Access | Open issue |
 |---|---|---|---|
-| Nigeria | NLFS Q1 2024; Q2 2024–Q2 2025 | Registration | Confirm all quarters in release |
-| Kenya | KCHSP 2022 | Registration | ILFS 2026 fielded, not released |
-| Uganda | Labour Market Survey 2025 | 10% sample public; full file by request | Request to UBOS |
-| Ethiopia | NIHS 2024/25 labour module | Not released | Request to ESS |
-| Ghana | QLFS 2025 Q1–Q3 | Registration | Q1 file missing |
-| Rwanda | LFS 2025 | Public use | Working age 16+ |
-| Tanzania | ILFS 2025 | Public use | — |
-| Malawi | LFS 2024 | Not released | Request to NSO. IHS6 2024/25 **in hand** as a separate instrument, not a substitute |
-| Mozambique | IOF 2022 | Formal request | Request to INE |
-| WAEMU ×8 | EHCVM-2 2021/22 | **In hand** (WB MDL v01) | EHCVM-3 2025/26 not released |
+| Nigeria | NLFS Q1 2024–Q2 2025 (6 quarters) | **In hand** | Q2 2024 coding shortfall (#10) |
+| Kenya | KCHSP 2022 | **In hand**, public subset only | Full data by KNBS request; ILFS 2026 not released (#3) |
+| Uganda | LMS 2025 | **10% sample in hand**; full file by request | Request to UBOS (#4, #11). NLFS 2021 10% file in hand, reference only |
+| Ethiopia | NIHS 2024/25 labour module | Not released | Request to ESS (#6, #13) |
+| Ghana | QLFS 2025; AHIES 2022–2024 | **In hand** (QLFS Q2–Q3 only) | QLFS Q1 2025 missing; baseline series to choose (#8) |
+| Rwanda | LFS 2025 | **In hand** | ISIC/ISCO at 2 digits only (#9) |
+| Tanzania | ILFS 2025 | **In hand** | — |
+| Malawi | LFS 2024 | Not released | Request to NSO (#7, #14). IHS6 2024/25 **in hand** as a separate instrument, not a substitute |
+| Mozambique | IOF 2022 | Licensed request submitted (no. 276) | Awaiting INE (#5, #12). INFOR 2021/22 requested (no. 277); IAI 2023 and WIDER HMLMD in hand, not substitutes |
+| Senegal | ENES 2025 Q1–Q4 (standalone LFS) | Licensed requests submitted (nos. 3589–3592) | ENES vs EHCVM-2 as main source (#19) |
+| WAEMU ×8 | EHCVM-2 2021/22 | **In hand** (WB MDL v01) | EHCVM-3 2025/26 not released (#2) |
 
 Full detail, caveats and evidence links: [`metadata/sources.csv`](metadata/sources.csv);
 decisions pending: [`metadata/flags.csv`](metadata/flags.csv).
@@ -81,9 +83,17 @@ python scripts/validate_metadata.py     # check the register
 python scripts/build_source_matrix.py   # regenerate registers/source_matrix.xlsx
 ```
 
-To download from the World Bank Microdata Library, put `WB_MDL_API_KEY=<key>` in a `.env`
-file at the repository root. The file is git-ignored and must never be committed. Then run
-`python scripts/wb_mdl_download.py <IDNO> --list`.
+API keys go in a `.env` file at the repository root. The file is git-ignored and must never
+be committed.
+
+| Variable | Catalog |
+|---|---|
+| `WB_MDL_API_KEY` | World Bank Microdata Library (`python scripts/wb_mdl_download.py <IDNO> --list`) |
+| `ANSD_NADA_API_KEY` | ANSD Senegal (anads.ansd.sn) |
+| `INE_MOZ_NADA_API_KEY` | INE Mozambique (mozdata.ine.gov.mz) |
+
+Licensed files on national NADA catalogs cannot be fetched through the API; download them from
+the request page once the request is approved.
 
 To record a new or updated source, edit `metadata/sources.csv`, run both scripts and open
 a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md).
