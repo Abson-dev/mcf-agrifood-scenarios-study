@@ -16,6 +16,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EHCVM-2 (8 countries), BFA panel and IHS6 questionnaires in `docs/questionnaires/`.
 - `scripts/wb_mdl_download.py` (API key read from git-ignored `.env`).
 
+### Added (Malawi)
+- LFS 2024 report in `data/raw/ag-programming/MWI_LFS_2024/documentation/` (NSO): 20,310 HH in
+  680 EAs, fieldwork 26 May–31 Jul 2024, ISIC Rev.4 / ISCO-08. Documentation only; microdata still
+  need a request to the Commissioner of Statistics (commissioner@nso.gov.mw).
+- Lead recorded: ILO surveyLib entry 8905 (`MWI_2024_LFS_v01_M_ILO_VAR`) listed a data file
+  `FA_MWI_LFS_2024_FULL`. surveyLib is retired (HTTP 410), so the entry can't be opened; ILOSTAT
+  can be asked. Added to `portals.csv`.
+
 ### Added (Kenya)
 - KCHSP 2022 in `data/raw/focus-countries/KEN_KCHSP_2022/`: 17,894 HH, 71,239 persons,
   four quarters, 47 counties. Year confirmed from the data; 4-digit ISIC for main jobs.

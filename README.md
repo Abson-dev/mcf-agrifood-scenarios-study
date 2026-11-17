@@ -33,7 +33,7 @@ matrix and the tooling that keeps them consistent. It never holds the microdata 
 | Ghana | QLFS 2025; AHIES 2022–2024 | **In hand** (QLFS Q2–Q3 only) | QLFS Q1 2025 missing; baseline series to choose (#8) |
 | Rwanda | LFS 2025 | **In hand** | ISIC/ISCO at 2 digits only (#9) |
 | Tanzania | ILFS 2025 | **In hand** | — |
-| Malawi | LFS 2024 | Not released | Request to NSO (#7, #14). IHS6 2024/25 **in hand** as a separate instrument, not a substitute |
+| Malawi | LFS 2024 | Not released; **report in hand** | Request to NSO Commissioner of Statistics (#7, #14). ILO surveyLib once listed a full file (catalog 8905), now offline. IHS6 2024/25 **in hand** as a separate instrument, not a substitute |
 | Mozambique | IOF 2022 | Licensed request submitted (no. 276) | Awaiting INE (#5, #12). INFOR 2021/22 requested (no. 277); IAI 2023 and WIDER HMLMD in hand, not substitutes |
 | Senegal | ENES 2025 Q1–Q4 (standalone LFS) | Licensed requests submitted (nos. 3589–3592) | ENES vs EHCVM-2 as main source (#19) |
 | WAEMU ×8 | EHCVM-2 2021/22 | **In hand** (WB MDL v01) | EHCVM-3 2025/26 not released (#2) |

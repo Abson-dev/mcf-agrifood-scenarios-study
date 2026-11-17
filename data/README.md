@@ -62,10 +62,11 @@ and Ethiopia formal requests (see `metadata/portals.csv`).
 | Folder | Release | Files | Households | Individuals | Notes |
 |---|---|---|---|---|---|
 | `MWI_IHS6_2024-25` | MWI_2024-2025_IHS-VI_v01_M_STATA14 | 81 .dta | 12,888 | 55,911 | Integrated household survey; labour module `hh_mod_e`. **Not** a substitute for the Malawi LFS 2024 |
+| `MWI_LFS_2024` | NSO report only (`documentation/`) | 1 .pdf | (20,310 in design) | — | **No microdata.** Report: 680 EAs, fieldwork 26 May–31 Jul 2024, ISIC Rev.4 / ISCO-08 |
 
 | `TZA_ILFS_2025` | TZA-NBS-2025-v01 (`ILFS2025_URT_For_Sharing.sav`) | 1 .sav | ~14,217 (Zanzibar 3,647) | 60,889 | Annual weight: `weight` sums to the population over the 4 quarters, so quarterly estimates need ×4. Quarter in `qrt`. Labels in Swahili |
 
-Mozambique (IOF 2022) and Malawi LFS 2024 are pending formal requests.
+Mozambique (IOF 2022) and Malawi LFS 2024 microdata are pending formal requests.
 
 ### waemu/
 
