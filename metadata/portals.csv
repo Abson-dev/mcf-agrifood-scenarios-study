@@ -9,4 +9,5 @@ NISR microdata (extra),https://microdata.statistics.gov.rw,LFS 2025 (125),Regist
 NBS Tanzania TNADA (extra),https://microdata.nbs.go.tz,ILFS 2025 (65),Registered,ILFS 2025 IN HAND
 INE Moçambique (formal request),https://mozdata.ine.gov.mz,IOF 2022 (79),Request not lodged,—
 ESS Ethiopia (formal request),https://ess.gov.et,NIHS 2024/25 labour module,Request not lodged,—
-NSO Malawi (formal request),https://nsomalawi.mw,LFS 2024,Request not lodged,—
+NSO Malawi (formal request),https://nsomalawi.mw,LFS 2024,"No microdata portal; request by letter to commissioner@nso.gov.mw. Letter drafted, awaits signatory",LFS 2024 report downloaded 16 Nov 2026 (documentation only)
+ILO surveyLib (retired),https://webapps.ilo.org/surveyLib/index.php/catalog/8905,Malawi LFS 2024 (lead only),Not applicable: site returns HTTP 410,Entry 8905 (FA_MWI_LFS_2024_FULL) seen in search results only; ask ILOSTAT
